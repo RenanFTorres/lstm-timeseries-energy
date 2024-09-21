@@ -6,6 +6,7 @@ here = os.path.dirname(os.path.abspath(__file__))
 
 filename = os.path.join(here, 'config.json')
 filename_duas_unas = os.path.join(here, './dataset/EEAB_DUAS_UNAS.csv')
+filename_pasta_duas_unas = os.path.join(here, './dataset')
 
 # Carregar o JSON de configuração
 with open(filename, 'r') as f:
@@ -24,27 +25,42 @@ df.set_index('timestamp', inplace=True)
 
 # Remover as colunas originais de 'Data' e 'Hora' já que temos o 'timestamp'
 df.drop(columns=['Data', 'Hora'], inplace=True)
-
-# Função para agrupar dados por dias e horas
-def group_data(df, days, hours):
-    # Resample para dados diários
-    daily_resample = df.resample(f'{days}D').mean()  # Pode mudar para sum() ou outra função de agregação
-    # Para cada hora, podemos recortar um subset da granularidade original
-    hourly_resample = daily_resample.resample(f'{hours}H').mean()
-    return hourly_resample
-
-# Iterar sobre as combinações de agrupamento
-for day in dataset_config['group_by']['days']:
-    for hour in dataset_config['group_by']['hours']:
-        # Agrupar os dados
-        grouped_df = group_data(df, day, hour)
         
-        # Criar diretórios para salvar os arquivos, se necessário
-        output_dir = f'output/duas_unas_days_{day}_hours_{hour}'
+# Função para agrupar por horas
+def group_by_hours(df, hours_list):
+    for hours in hours_list:
+        # Resample para o somatório a cada 'hours' horas
+        grouped_df = df.resample(f'{hours}H').sum()
+        
+        # Usar o diretório 'dataset' existente e criar a pasta 'duas_unas' dentro dele
+        output_dir = os.path.join(filename_pasta_duas_unas, 'duas_unas/hours')
+        os.makedirs(output_dir, exist_ok=True) # Cria 'duas_unas' dentro de 'dataset', se não existir
+        
+        # Salvar arquivo CSV
+        output_file = os.path.join(output_dir, f'grouped_{hours}_hours.csv')
+        grouped_df.to_csv(output_file)
+        print(f'Salvo: {output_file}')
+
+# Função para agrupar por dias
+def group_by_days(df, days_list):
+    for days in days_list:
+        # Resample para o somatório a cada 'days' dias
+        grouped_df = df.resample(f'{days}D').sum()
+        
+        # Usar o diretório 'dataset' existente e criar a pasta 'duas_unas' dentro dele
+        output_dir = os.path.join(filename_pasta_duas_unas, 'duas_unas/days')
         os.makedirs(output_dir, exist_ok=True)
         
-        # Salvar arquivo agrupado
-        output_file = os.path.join(output_dir, f'grouped_days_{day}_hours_{hour}.csv')
+        # Salvar arquivo CSV
+        output_file = os.path.join(output_dir, f'grouped_{days}_days.csv')
         grouped_df.to_csv(output_file)
-        
         print(f'Salvo: {output_file}')
+
+# Listas de horas e dias para agrupar
+hours_list = dataset_config['group_by']['hours']
+days_list = dataset_config['group_by']['days']
+
+# Executar os agrupamentos
+group_by_hours(df, hours_list)
+group_by_days(df, days_list)
+
