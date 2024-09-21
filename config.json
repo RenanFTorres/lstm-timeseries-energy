@@ -1,0 +1,49 @@
+{
+    "dataset": {
+      "name": "experiment_dataset",
+      "type": "time_series",
+      "path": "/path/to/dataset",
+      "format": "csv",
+      "group_by": {
+        "days": [1, 2, 3, 5, 7, 9],
+        "hours": [24, 36, 48, 60]
+      },
+      "split_ratios": [
+        {"train": 0.1, "test": 0.9},
+        {"train": 0.2, "test": 0.8},
+        {"train": 0.3, "test": 0.7},
+        {"train": 0.4, "test": 0.6},
+        {"train": 0.5, "test": 0.5},
+        {"train": 0.6, "test": 0.4},
+        {"train": 0.7, "test": 0.3},
+        {"train": 0.8, "test": 0.2},
+        {"train": 0.9, "test": 0.1}
+      ]
+    },
+    "training": {
+      "batch_size": [32, 64, 128],
+      "epochs": [50, 100, 150],
+      "optimizer": ["adam", "rmsprop", "sgd"],
+      "learning_rate": [0.001, 0.0005, 0.0001],
+      "loss_function": ["mean_squared_error", "mean_absolute_error"],
+      "metrics": ["accuracy", "mean_absolute_error", "mean_squared_error"],
+      "shuffle": [true, false],
+      "stateful": [false, true],
+      "timesteps": [10, 20, 30],
+      "dropout": [0.2, 0.3, 0.5]
+    },
+    "testing": {
+      "batch_size": 64,
+      "metrics": ["accuracy", "mean_absolute_error", "mean_squared_error"],
+      "verbose": 1
+    },
+    "validation": {
+      "method": "k-fold",
+      "k": 5,
+      "validation_split": 0.1
+    },
+    "time_horizon": {
+      "hours": [1, 4, 6, 12, 24, 48],
+      "days": [3, 5, 7, 15, 30, 45, 60, 90, 120]
+    }
+  }
