@@ -21,16 +21,20 @@
       ]
     },
     "training": {
-      "batch_size": [32, 64, 128],
-      "epochs": [50, 100, 150],
+      "batch_size_days": [5, 10, 15, 30],
+      "batch_size_hours": [32, 64, 128, 256, 512, 640],
+      "patience": [1, 2, 3, 4, 5],
       "optimizer": ["adam", "rmsprop", "sgd"],
       "learning_rate": [0.001, 0.0005, 0.0001],
       "loss_function": ["mean_squared_error", "mean_absolute_error"],
       "metrics": ["accuracy", "mean_absolute_error", "mean_squared_error"],
       "shuffle": [true, false],
       "stateful": [false, true],
-      "timesteps": [10, 20, 30],
-      "dropout": [0.2, 0.3, 0.5]
+      "activation": ["tanh", "sigmoid"],
+      "neurons":[10, 25, 50, 75, 100, 125, 150, 200],
+      "timesteps_days": [3, 9, 12, 18, 24, 36],
+      "timesteps_hours": [12, 24, 36, 48, 96, 144, 240, 480, 720],
+      "dropout": [0.2, 0.3, 0.4]
     },
     "testing": {
       "batch_size": 64,
