@@ -21,7 +21,7 @@ def group_data(df, days, hours):
     # Resample para dados diários
     daily_resample = df.resample(f'{days}D').mean()  # Pode mudar para sum() ou outra função de agregação
     # Para cada hora, podemos recortar um subset da granularidade original
-    hourly_resample = daily_resample.resample(f'{hours}H').mean()
+    hourly_resample = daily_resample.resample(f'{hours}h').mean()
     return hourly_resample
 
 # Iterar sobre as combinações de agrupamento
