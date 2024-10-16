@@ -1,0 +1,49 @@
+{
+    "dataset": {
+      "name": "experiment_dataset",
+      "type": "time_series",
+      "path": "/path/to/dataset",
+      "format": "csv",
+      "group_by": {
+        "days": [3, 5, 7, 9],
+        "hours": [1, 4, 8, 12, 24, 36, 48, 60]
+      },
+      "split_ratios": [
+        {"train": 0.3, "test": 0.7},
+        {"train": 0.4, "test": 0.6},
+        {"train": 0.5, "test": 0.5},
+        {"train": 0.6, "test": 0.4},
+        {"train": 0.7, "test": 0.3}
+        ]
+    },
+    "training": {
+      "batch_size_days": [5, 15, 30],
+      "batch_size_hours": [96, 288, 512],
+      "patience": [2, 4],
+      "optimizer": ["adam", "rmsprop"],
+      "learning_rate": [0.0005, 0.0001],
+      "loss_function": ["mean_squared_error", "mean_absolute_error"],
+      "metrics": ["accuracy", "mean_absolute_error"],
+      "shuffle": [true],
+      "stateful": [false],
+      "activation": ["tanh", "sigmoid"],
+      "neurons":[75, 150, 200],
+      "timesteps_days": [3, 12, 24],
+      "timesteps_hours": [20, 48, 120],
+      "dropout": [0.2, 0.3, 0.4]
+    },
+    "testing": {
+      "batch_size": 64,
+      "metrics": ["accuracy", "mean_absolute_error", "mean_squared_error"],
+      "verbose": 1
+    },
+    "validation": {
+      "method": "k-fold",
+      "k": 5,
+      "validation_split": 0.1
+    },
+    "time_horizon": {
+      "hours": [1, 4, 6, 12, 24, 48],
+      "days": [3, 5, 7, 15, 30, 45, 60, 90, 120]
+    }
+  }

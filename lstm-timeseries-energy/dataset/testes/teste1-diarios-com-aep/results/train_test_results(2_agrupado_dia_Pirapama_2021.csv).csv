@@ -1,0 +1,13 @@
+train_ratio,test_ratio,learning_rate,batch_size,patience,optimizer,activation,loss_function,metrics,shuffle,stateful,neurons,dropout,timesteps,horizon,mae,mse,rmse,mape,accuracy
+0.7,0.3,0.0005,30,2,adam,tanh,mse,accuracy,True,False,100,0.3,14,1,568.194,322844.715,568.194,0.0,100.0
+0.7,0.3,0.0005,30,2,adam,tanh,mse,accuracy,True,False,100,0.3,14,3,985.934,1061719.843,1030.398,0.01,100.0
+0.7,0.3,0.0005,30,2,adam,tanh,mse,accuracy,True,False,100,0.3,14,9,1168.453,1426971.751,1194.559,0.01,100.0
+0.7,0.3,0.0005,30,2,adam,tanh,mse,accuracy,True,False,100,0.3,14,12,1175.402,1441116.921,1200.465,0.01,100.0
+0.7,0.3,0.0005,30,2,adam,tanh,mse,accuracy,True,False,100,0.3,14,15,1193.221,1479474.635,1216.337,0.01,100.0
+0.7,0.3,0.0005,30,2,adam,tanh,mse,accuracy,True,False,100,0.3,14,18,1209.117,1512369.706,1229.784,0.01,100.0
+0.7,0.3,0.0005,30,2,adam,tanh,mse,accuracy,True,False,100,0.3,14,24,1242.921,1591843.81,1261.683,0.01,100.0
+0.7,0.3,0.0005,30,2,adam,tanh,mse,accuracy,True,False,100,0.3,14,36,1336.092,1900975.549,1378.759,0.01,100.0
+0.7,0.3,0.0005,30,2,adam,tanh,mse,accuracy,True,False,100,0.3,14,45,1284.047,1762576.465,1327.621,0.01,100.0
+0.7,0.3,0.0005,30,2,adam,tanh,mse,accuracy,True,False,100,0.3,14,60,1322.949,1918779.435,1385.2,0.01,100.0
+0.7,0.3,0.0005,30,2,adam,tanh,mse,accuracy,True,False,100,0.3,14,75,1414.209,2195959.325,1481.877,0.01,100.0
+0.7,0.3,0.0005,30,2,adam,tanh,mse,accuracy,True,False,100,0.3,14,90,2038.095,10514506.091,3242.608,0.02,98.89
