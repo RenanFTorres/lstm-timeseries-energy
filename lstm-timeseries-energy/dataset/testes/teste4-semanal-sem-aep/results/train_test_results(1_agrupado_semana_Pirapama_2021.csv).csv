@@ -1,0 +1,6 @@
+train_ratio,test_ratio,learning_rate,batch_size,patience,optimizer,activation,loss_function,metrics,shuffle,stateful,neurons,dropout,timesteps,horizon,mae,mse,rmse,mape,accuracy
+0.7,0.3,0.0005,10,2,adam,tanh,mse,accuracy,True,False,100,0.3,4,1,13717.124,188159485.176,13717.124,0.02,100.0
+0.7,0.3,0.0005,10,2,adam,tanh,mse,accuracy,True,False,100,0.3,4,3,12871.102,166052070.136,12886.119,0.02,100.0
+0.7,0.3,0.0005,10,2,adam,tanh,mse,accuracy,True,False,100,0.3,4,9,12239.032,156658959.076,12516.348,0.01,100.0
+0.7,0.3,0.0005,10,2,adam,tanh,mse,accuracy,True,False,100,0.3,4,12,12959.853,221665399.127,14888.432,0.02,100.0
+0.7,0.3,0.0005,10,2,adam,tanh,mse,accuracy,True,False,100,0.3,4,15,59286.154,34694451349.127,186264.466,0.4,93.33
