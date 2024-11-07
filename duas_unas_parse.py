@@ -5,8 +5,8 @@ import os
 here = os.path.dirname(os.path.abspath(__file__))
 
 filename = os.path.join(here, 'config.json')
-filename_duas_unas = os.path.join(here, './dataset/EEAB_DUAS_UNAS.csv')
-filename_pasta_duas_unas = os.path.join(here, './dataset')
+filename_duas_unas = os.path.join(here, './dataset/AEP_hourly.csv')
+filename_pasta_duas_unas = os.path.join(here, './dataset/outras_unidades/AEP/')
 
 # Carregar o JSON de configuração
 with open(filename, 'r') as f:
@@ -31,11 +31,11 @@ def group_by_hours(df, hours_list):
     for hours in hours_list:
         # Resample para o somatório a cada 'hours' horas
         grouped_df = df.resample(f'{hours}H').sum()
-        
+
         # Usar o diretório 'dataset' existente e criar a pasta 'duas_unas' dentro dele
         output_dir = os.path.join(filename_pasta_duas_unas, 'duas_unas/hours')
         os.makedirs(output_dir, exist_ok=True) # Cria 'duas_unas' dentro de 'dataset', se não existir
-        
+
         # Salvar arquivo CSV
         output_file = os.path.join(output_dir, f'grouped_{hours}_hours.csv')
         grouped_df.to_csv(output_file)

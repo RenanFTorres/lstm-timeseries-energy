@@ -1,0 +1,2 @@
+valid,mae,mse,rmse,mape,accur 2%,accur 5%,accur 10%,Erro %. acum 3d,Erro %. acum 60d,Erro %. acum 90d,Erro %. acum 1ºm,Erro %. acum 2ºm,Erro %. acum 3ºm
+split_0B,4744.609,40281409.739,6346.764,0.08,16.67,33.33,80.0,0.52,2.86,2.52,0.52,6.08,1.82
