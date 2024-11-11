@@ -10,11 +10,11 @@ MAPE(Erro percentual médio absoluto) Score of LSTM model =  0.1
 5% Accuracy Score of LSTM model =  10.0
 10% Accuracy Score of LSTM model =  60.0
  
-Erro percentual acumulado 30 dias: 3.65 %
-Erro percentual acumulado 60 dias: 6.59 %
-Erro percentual acumulado 90 dias: 6.6 %
+Erro %. acum 30 dias: 3.65 %
+Erro %. acum 60 dias: 6.59 %
+Erro %. acum 90 dias: 6.6 %
  
-Erro percentual acumulado 1º mês: 3.65 %
-Erro percentual acumulado 2º mês: 9.4 %
-Erro percentual acumulado 3º mês: 6.61 %
+Erro %. acum 1º mês: 3.65 %
+Erro %. acum 2º mês: 9.4 %
+Erro %. acum 3º mês: 6.61 %
 Terminada sequencia de testes

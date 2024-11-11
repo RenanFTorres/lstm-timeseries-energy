@@ -1,0 +1,20 @@
+MAE(Erro absoluto médio) Score of LSTM model =  4903.178
+ 
+MSE(Erro quadrático médio) Score of LSTM model =  41015347.785
+ 
+RMSE(Raiz do erro quadrático médio) Score of LSTM model =  6404.323
+ 
+MAPE(Erro percentual médio absoluto) Score of LSTM model =  0.08
+ 
+2% Accuracy Score of LSTM model =  13.33
+5% Accuracy Score of LSTM model =  30.0
+10% Accuracy Score of LSTM model =  83.33
+ 
+Erro %. acum 30 dias: 0.05 %
+Erro %. acum 60 dias: 2.79 %
+Erro %. acum 90 dias: 2.9 %
+ 
+Erro %. acum 1º mês: 0.05 %
+Erro %. acum 2º mês: 5.5 %
+Erro %. acum 3º mês: 3.12 %
+Terminada sequencia de testes

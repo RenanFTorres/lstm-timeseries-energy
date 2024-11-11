@@ -1,20 +1,20 @@
-MAE(Erro absoluto médio) Score of LSTM model =  5728.32
+MAE(Erro absoluto médio) Score of LSTM model =  6223.479
  
-MSE(Erro quadrático médio) Score of LSTM model =  44885831.716
+MSE(Erro quadrático médio) Score of LSTM model =  49073558.636
  
-RMSE(Raiz do erro quadrático médio) Score of LSTM model =  6699.689
+RMSE(Raiz do erro quadrático médio) Score of LSTM model =  7005.252
  
-MAPE(Erro percentual médio absoluto) Score of LSTM model =  0.09
+MAPE(Erro percentual médio absoluto) Score of LSTM model =  0.1
  
 2% Accuracy Score of LSTM model =  3.33
-5% Accuracy Score of LSTM model =  20.0
+5% Accuracy Score of LSTM model =  10.0
 10% Accuracy Score of LSTM model =  63.33
  
-Erro percentual acumulado 30 dias: 2.51 %
-Erro percentual acumulado 60 dias: 5.73 %
-Erro percentual acumulado 90 dias: 5.35 %
+Erro %. acum 30 dias: 3.88 %
+Erro %. acum 60 dias: 6.05 %
+Erro %. acum 90 dias: 5.68 %
  
-Erro percentual acumulado 1º mês: 2.51 %
-Erro percentual acumulado 2º mês: 8.8 %
-Erro percentual acumulado 3º mês: 4.59 %
+Erro %. acum 1º mês: 3.88 %
+Erro %. acum 2º mês: 8.11 %
+Erro %. acum 3º mês: 4.94 %
 Terminada sequencia de testes

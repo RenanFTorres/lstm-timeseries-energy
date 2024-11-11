@@ -1,7 +1,7 @@
 {
 "datasets":{
 
-    "1_day_duas_unas":{
+    "1_days_duas_unas":{
         
         "layers": 4,
         "batch_size": 46,
