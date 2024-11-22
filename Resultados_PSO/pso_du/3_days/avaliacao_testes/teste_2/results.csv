@@ -1,2 +1,2 @@
 validation,mae,mse,rmse,mape,accuracy 2%,accuracy 5%,accuracy 10%,Erro percentual acumulado 30 dias,Erro percentual acumulado 60 dias,Erro percentual acumulado 90 dias,Erro percentual acumulado 1º mês,Erro percentual acumulado 2º mês,Erro percentual acumulado 3º mês
-0.3,4764.671,33703807.066,5805.498,0.08,3.33,30.0,86.67,0.93,3.29,3.16,0.93,5.53,2.91
+0.3,4764.671,33703804.834,5805.498,0.08,3.33,30.0,86.67,0.93,3.29,3.16,0.93,5.53,2.91

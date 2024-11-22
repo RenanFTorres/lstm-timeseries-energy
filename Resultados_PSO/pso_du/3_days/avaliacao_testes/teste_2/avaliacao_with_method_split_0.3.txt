@@ -1,6 +1,6 @@
 MAE(Erro absoluto médio) Score of LSTM model =  4764.671
  
-MSE(Erro quadrático médio) Score of LSTM model =  33703807.066
+MSE(Erro quadrático médio) Score of LSTM model =  33703804.834
  
 RMSE(Raiz do erro quadrático médio) Score of LSTM model =  5805.498
  
