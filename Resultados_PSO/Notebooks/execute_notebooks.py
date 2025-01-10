@@ -8,7 +8,7 @@ import sys
 print("Versão do Python em uso:", sys.version)
 
 # Diretório onde os notebooks estão armazenados
-notebook_dir = 'C:/Users/Renan Torres/OneDrive/Documentos/Github/Resultados_PSO/Notebooks'  # Substitua pelo caminho absoluto real
+notebook_dir = 'C:/Users/Renan Torres/OneDrive/Documentos/Github/Resultados_PSO/Notebooks'  #caminho absoluto real
 
 # Lista de notebooks a serem executados, em ordem
 notebooks = [

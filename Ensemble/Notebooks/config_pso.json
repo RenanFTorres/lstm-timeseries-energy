@@ -1,0 +1,74 @@
+{
+"datasets":{
+
+    "1_days_duas_unas":{
+        
+        "layers": 4,
+        "batch_size": 46,
+        "patience": 8,
+        "optimizer": "rmsprop",
+        "learning_rate": 0.005,
+        "loss_function": "wmae",
+        "metrics": "accuracy",
+        "activation": "relu",
+        "neurons":75,
+        "timesteps": 1,
+        "dropout": 0.4,
+        "output_horizon":90,
+        "time_horizon": [30, 60, 90]
+    },
+
+    "3_days_duas_unas":{
+        
+        "layers": 3,
+        "batch_size": 15,
+        "patience": 6,
+        "optimizer": "rmsprop",
+        "learning_rate": 0.005,
+        "loss_function": "wmae",
+        "metrics": "accuracy",
+        "activation": "relu",
+        "neurons": 44,
+        "timesteps": 1,
+        "dropout": 0.39,
+        "output_horizon": 30,
+        "time_horizon": [10, 20, 30]
+    },
+    
+    "7_days_duas_unas":{
+        
+        "layers": 3,
+        "batch_size": 48,
+        "patience": 6,
+        "optimizer": "sgd",
+        "learning_rate": 0.05,
+        "loss_function": "wmae",
+        "metrics": "accuracy",
+        "activation": "relu",
+        "neurons":42,
+        "timesteps": 1,
+        "dropout": 0.15,
+        "output_horizon":12,
+        "time_horizon": [4, 8, 12]
+    },
+
+    "3_days_concat":{
+        
+        "layers": 2,
+        "batch_size": 20,
+        "patience": 4,
+        "optimizer": "rmsprop",
+        "learning_rate": 0.005,
+        "loss_function": "wmae",
+        "metrics": "accuracy",
+        "activation": "relu",
+        "neurons": 150,
+        "timesteps": 1,
+        "dropout": 0.4,
+        "output_horizon": 30,
+        "time_horizon": [10, 20, 30]
+    }
+
+}
+
+}
